@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 import { toast } from "react-toastify";
 import { StarIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
+import { ProductCardSkeleton } from "../components/ProductCardSkeleton";
 function SensitiveProduct() {
   const { getAllProductsByCategory } = useProduct();
   const { addToCart } = useCart();
