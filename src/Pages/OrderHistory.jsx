@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function OrderHistory() {
   const [orders, setOrders] = useState([]);
@@ -54,12 +55,12 @@ function OrderHistory() {
           <h3 className="mt-2 text-lg font-medium text-gray-900">No orders found</h3>
           <p className="mt-1 text-sm text-gray-500">You haven't placed any orders yet.</p>
           <div className="mt-6">
-            <button
-              type="button"
+            <Link
+              to={"/shop"}
               className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Start Shopping
-            </button>
+            </Link>
           </div>
         </div>
       ) : (
@@ -69,7 +70,7 @@ function OrderHistory() {
               <div className="p-6">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
                   <div>
-                    <h2 className="text-lg font-medium text-gray-900">Order {order._id}</h2>
+                    <h2 className="text-[14px] text-gray-900">Order #{order._id.slice(0,6)}</h2>
                     <p className="text-sm text-gray-500">Placed on {new Date(order.createdAt).toLocaleString()}</p>
                   </div>
                   <div className="mt-2 w-fit sm:mt-0 px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
@@ -115,21 +116,6 @@ function OrderHistory() {
                     {order.items.length} {order.items.length === 1 ? 'item' : 'items'}
                   </p>
                   <p className="text-lg font-medium text-gray-900">Total: ₹{order.subtotal.toLocaleString()}</p>
-                </div>
-  
-                <div className="mt-6 flex space-x-4">
-                  <button
-                    type="button"
-                    className="flex-1 bg-white border border-gray-300 rounded-md py-2 px-4 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    View Details
-                  </button>
-                  <button
-                    type="button"
-                    className="flex-1 bg-[#f18526] border border-transparent rounded-md py-2 px-4 text-sm font-medium text-white hover:bg-[#f18526ef] "
-                  >
-                    Buy Again
-                  </button>
                 </div>
               </div>
             </div>

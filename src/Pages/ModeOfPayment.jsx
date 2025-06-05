@@ -4,11 +4,13 @@ import { RxCross2 } from "react-icons/rx";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { MdOutlinePayment } from "react-icons/md";
 import { useCheckout } from "../Context/CheckoutContext";
+import { useCart } from "../Context/CartContext";
 import { toast } from "react-toastify";
 
 function ModeOfPayment({ isOpen, onClose, openCart }) {
   const [selectedMode, setSelectedMode] = useState("");
   const { address, setPaymentMethod ,cart} = useCheckout();
+  const {setCartItems}=useCart();
   if (!isOpen) return null;
 
   const handlePayment = async() => {
@@ -18,7 +20,7 @@ function ModeOfPayment({ isOpen, onClose, openCart }) {
     }
 
     setPaymentMethod(selectedMode);
-    
+    setCartItems([]);
 
     try {
       const token = localStorage.getItem("token");
