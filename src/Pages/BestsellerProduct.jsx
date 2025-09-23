@@ -71,7 +71,7 @@ function DisplaProduct() {
           className="relative overflow-hidden transition-shadow duration-300 bg-white shadow-lg group rounded-2xl hover:shadow-xl"
         >
           {/* Product Image */}
-          <div className="relative h-[350px] w-full overflow-hidden">
+          <div className="relative md:h-[350px] w-full overflow-hidden">
                   <img
                     src={product?.image}
                     alt={product?.name}
