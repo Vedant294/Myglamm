@@ -1,0 +1,16 @@
+orange-#f18526
+green-#539d68
+https://squoosh.app/  (for resizing the image)
+https://app.leonardo.ai/ (generates good images)
+
+
+improvement
+email verification
+collection relation, aggregation
+rate limit , cluster
+fs module
+redis (caching)
+stream
+sso
+sockets 
+graph
