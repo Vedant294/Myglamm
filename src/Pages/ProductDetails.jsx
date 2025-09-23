@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { useProduct } from "../Context/ProductContext";
@@ -190,11 +190,10 @@ function ProductDetails() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`py-4 px-6 text-center border-b-2 font-medium text-sm ${
-                    activeTab === tab
-                      ? "border-amber-500 text-amber-600"
-                      : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                  }`}
+                  className={`py-4 px-6 text-center border-b-2 font-medium text-sm ${activeTab === tab
+                    ? "border-amber-500 text-amber-600"
+                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                    }`}
                 >
                   {tab}
                 </button>
