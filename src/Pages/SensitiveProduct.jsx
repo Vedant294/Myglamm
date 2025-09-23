@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
-=======
->>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
 import { useEffect, useState } from "react";
 import { useProduct } from "../Context/ProductContext";
 import { motion } from "framer-motion";
@@ -45,11 +42,6 @@ function SensitiveProduct() {
         }),
       });
 
-<<<<<<< HEAD
-=======
-      const data = await response.json();
-      toast(data.message);
->>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
     } catch (error) {
       console.error("Error adding to cart:", error);
     }
@@ -74,11 +66,7 @@ function SensitiveProduct() {
                 className="relative overflow-hidden transition-shadow duration-300 bg-white shadow-lg group rounded-2xl hover:shadow-xl"
               >
                 {/* Product Image */}
-<<<<<<< HEAD
                 <div className="relative h-[350px] w-full overflow-hidden">
-=======
-                <div className="relative h-auto overflow-hidden">
->>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
                   <img
                     src={product?.image}
                     alt={product?.name}
