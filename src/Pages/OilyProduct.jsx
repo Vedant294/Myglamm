@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
+=======
+>>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
 import { useEffect, useState } from "react";
 import { useProduct } from "../Context/ProductContext";
 import { motion } from "framer-motion";
@@ -43,7 +46,12 @@ function OilyProduct() {
         }),
       });
   
+<<<<<<< HEAD
   
+=======
+      const data = await response.json();
+      toast(data.message);
+>>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
     } catch (error) {
       console.error("Error adding to cart:", error);
     }
@@ -68,6 +76,7 @@ function OilyProduct() {
           className="relative overflow-hidden transition-shadow duration-300 bg-white shadow-lg group rounded-2xl hover:shadow-xl"
         >
           {/* Product Image */}
+<<<<<<< HEAD
           <div className="relative h-[350px] w-full overflow-hidden">
                   <img
                     src={product?.image}
@@ -82,6 +91,22 @@ function OilyProduct() {
                     Quick View
                   </div>
                 </div>
+=======
+          <div className="relative h-auto overflow-hidden">
+            <img
+              src={product?.image}
+              alt={product?.name}
+              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+              onClick={() => showProdDetails(product?._id)}
+            />
+            <div
+              className="absolute px-3 py-1 text-xs font-medium text-gray-800 transition-opacity duration-300 rounded-full opacity-0 cursor-pointer top-4 right-4 bg-white/90 backdrop-blur-sm group-hover:opacity-100"
+              onClick={() => showProdDetails(product?._id)}
+            >
+              Quick View
+            </div>
+          </div>
+>>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
 
           {/* Product Info */}
           <div className="lg:p-5 p-1.5 space-y-2 border-t border-gray-100">

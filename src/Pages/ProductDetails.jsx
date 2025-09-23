@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
+=======
+>>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { useProduct } from "../Context/ProductContext";
@@ -81,7 +84,12 @@ function ProductDetails() {
         }
       );
 
+<<<<<<< HEAD
 
+=======
+      const data = await response.json();
+      toast(data.message);
+>>>>>>> 1e56997f4c3ef23ea3ceb55c329b64f2fac23c2c
     } catch (error) {
       console.error("Error adding to cart:", error);
     }

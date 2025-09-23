@@ -39,7 +39,6 @@ function Cart({ isCartOpen, onClose, onTriggerLogin, onCheckout }) {
           body: JSON.stringify({ quantity }),
         }
       );
-
       if (response.ok) {
         fetchCart(); // refresh cart after updating
       } else {
