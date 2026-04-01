@@ -1,51 +1,88 @@
-# 🧴 SkinBuddy
+# MyGlamm
 
-**SkinBuddy** is a skincare-focused eCommerce web application that helps users find the right skincare products based on their skin type. It features a smooth and intuitive shopping experience with category filtering, cart management, SSO login, and order tracking.
+A full-stack skincare eCommerce web application that helps users find the right skincare products based on their skin type.
 
-🌐 **Live Site**: [https://skin-buddy-chi.vercel.app/](https://skin-buddy-chi.vercel.app/)
-
----
-
-## ✨ Features
-
-- 🛒 **Skincare eCommerce Store**  
-  Browse and purchase skincare products with a clean and responsive UI.
-
-- 🔍 **Skin Type-Based Categories**  
-  Products are organized under Oily, Dry, and Combination skin categories.
-
-- 📦 **Cart & Order Management**  
-  Add products to the cart, manage quantities, and place orders seamlessly.
-
-- 🔐 **Single Sign-On (SSO) Login**  
-  Secure login system for a personalized shopping experience.
-
-- 📜 **Order History**  
-  Users can view their previous purchases and track their skincare journey.
-
-- 📱 **Responsive Design**  
-  Mobile and desktop views designed separately using React and Tailwind CSS.
+🌐 **Frontend**: [https://myglamm-blush.vercel.app](https://myglamm-blush.vercel.app)
+🛠️ **Admin Panel**: [https://myglamm-4ujd.vercel.app](https://myglamm-4ujd.vercel.app)
+⚙️ **Backend API**: [https://myglamm.onrender.com](https://myglamm.onrender.com)
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-### Frontend:
-- **React.js**
-- **Tailwind CSS**
-- **React Router DOM**
-- **Context API** (for global state like cart and order data)
-- **Framer Motion** (for animations)
+- Google OAuth + Email/Password Authentication
+- Product browsing by skin type (Oily, Dry, Combination, Sensitive)
+- Bestseller section
+- Product search with suggestions
+- Cart management (add, remove, update quantity)
+- Checkout flow — Address → Payment
+- Cash on Delivery + Demo Online Payment (card form)
+- Order history
+- Admin panel — Dashboard, Products, Orders, Contacts
 
-### Backend:
-- **Node.js**
-- **Express.js**
-- **MongoDB**
-- **JWT** for authentication
-- **Multer** for image/file handling (if applicable)
+---
 
+## Tech Stack
 
+**Frontend**
+- React 19 + Vite
+- Tailwind CSS
+- Framer Motion
+- React Router v7
 
+**Backend**
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- Cloudinary (image uploads)
+- Google OAuth
 
+**Admin**
+- React + Vite
+- Recharts (analytics)
+- Tailwind CSS
 
+---
 
+## Project Structure
+
+```
+Myglamm/
+├── src/          → Frontend (React)
+├── admin/        → Admin Panel (React)
+├── backend/      → Backend API (Node/Express)
+```
+
+---
+
+## Local Setup
+
+**Backend**
+```bash
+cd backend
+npm install --legacy-peer-deps
+node index.js
+```
+
+**Frontend**
+```bash
+npm install
+npm run dev
+```
+
+**Admin**
+```bash
+cd admin
+npm install
+npm run dev
+```
+
+---
+
+## Test Credentials
+
+**Customer**
+- Email: `abc@gmail.com`
+- Password: `123`
+
+**Admin** — Login via Google with admin account
