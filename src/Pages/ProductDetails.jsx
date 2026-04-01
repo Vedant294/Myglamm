@@ -2,7 +2,7 @@
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { useProduct } from "../Context/ProductContext";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
@@ -45,6 +45,7 @@ function ProductDetails() {
   const token = localStorage.getItem("token");
   const [details, setDetails] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("Description");
   const handleAddOne = () => setNum(num + 1);
 
@@ -171,8 +172,11 @@ function ProductDetails() {
             </button>
             <button
               className="px-6 py-3 border border-amber-600 text-amber-600 hover:bg-amber-50 rounded-lg text-lg font-medium transition-colors duration-300"
-              onClick={() => {
-                addToCart(details), handleCart(details);
+              onClick={async () => {
+                if (!token) { toast.error("Please login first!"); return; }
+                await handleCart(details);
+                addToCart(details);
+                navigate("/shop");
               }}
             >
               Buy Now

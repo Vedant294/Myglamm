@@ -52,7 +52,7 @@ function Contact() {
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Contact SkinBuddy
+            Contact MyGlamm
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We'd love to hear from you! Reach out with questions, feedback, or
@@ -179,7 +179,7 @@ function Contact() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                    <p className="text-gray-600">support@skinbuddy.com</p>
+                    <p className="text-gray-600">support@myglamm.com</p>
                     <p className="text-sm text-gray-500 mt-1">
                       We typically reply within 24 hours
                     </p>

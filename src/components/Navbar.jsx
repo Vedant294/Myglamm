@@ -73,14 +73,15 @@ function Navbar() {
     setMobileMenuOpen(false);
   };
 
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
-  //   if (searchQuery.trim()) {
-  //     navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-  //     setSearchQuery("");
-  //     setMobileMenuOpen(false);
-  //   }
-  // };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/productDetails/${suggestions[0]?._id}`);
+      setSearchQuery("");
+      setSuggestions([]);
+      setMobileMenuOpen(false);
+    }
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -122,19 +123,18 @@ function Navbar() {
         {/* Main Navbar */}
         <nav className="flex items-center justify-between h-20">
           {/* Logo - Always visible */}
-          <div className="flex-shrink-0 w-32 md:w-40">
-            <Link to="/">
-              <img
-                src={logo}
-                alt="SkinBuddy"
-                className="w-full h-auto object-contain hover:opacity-90 transition-opacity"
-              />
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center gap-1">
+              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "Georgia, serif" }}>
+                <span style={{ color: "#c9a84c" }}>My</span>
+                <span className="text-gray-900">Glamm</span>
+              </span>
             </Link>
           </div>
 
           {/* Search Bar - Always visible */}
           <div className="hidden sm:flex flex-1 max-w-xl mx-4 relative">
-            <form className="relative w-full">
+            <form className="relative w-full" onSubmit={handleSearch}>
               <input
                 type="text"
                 placeholder="Search products..."
@@ -280,7 +280,7 @@ function Navbar() {
         {/* Mobile Search (shown only when menu is closed) */}
         {!mobileMenuOpen && (
           <div className="sm:hidden pb-3 px-2">
-            <form className="relative">
+            <form className="relative" onSubmit={handleSearch}>
               <input
                 type="text"
                 placeholder="Search products..."

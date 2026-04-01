@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import { toast } from "react-toastify";
 import { GoogleLogin } from "@react-oauth/google";
 import { useAuth } from "../../Context/AuthContext";
+import axios from "axios";
 const Signup = ({ isOpen, onClose, onSwitchToLogin }) => {
   const { login } = useAuth();
 
@@ -24,26 +25,21 @@ const Signup = ({ isOpen, onClose, onSwitchToLogin }) => {
     try {
       const { credential } = response;
       const apiResponse = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/auth/google`,
-        { tokenId: credential }
+        `${import.meta.env.VITE_BACKEND_URL}/auth/google`,
+        { token: credential }
       );
-
-      // Assuming API returns token
-      const { token, user } = apiResponse.data; // backend should return user + token
+      const { token, user } = apiResponse.data;
       login(user, token);
       localStorage.setItem("token", token);
-      fetchUserInfo(token);
       toast.success("Login successful");
       onClose();
     } catch (err) {
-      message.error(
-        err.response?.data?.message || "Google login failed. Please try again."
-      );
+      toast.error(err.response?.data?.message || "Google login failed. Please try again.");
     }
   };
 
   const handleGoogleFailure = () => {
-    message.error("Google login failed. Please try again.");
+    toast.error("Google login failed. Please try again.");
   };
 
   const handleSubmit = (e) => {

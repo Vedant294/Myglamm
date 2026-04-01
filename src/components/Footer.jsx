@@ -9,12 +9,15 @@ function Footer() {
           {/* Brand Description */}
           <div>
             <div className="w-32 md:w-40 mb-4">
-              <img src={logo} alt="GlowEasy Logo" className="w-full" />
+              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "Georgia, serif" }}>
+                <span style={{ color: "#c9a84c" }}>My</span>
+                <span className="text-gray-900">Glamm</span>
+              </span>
             </div>
             <p className="text-sm text-gray-700 leading-relaxed">
               Discover skincare solutions tailored for all skin types—oily, dry,
               combination, and sensitive. At{" "}
-              <span className="font-semibold text-[#f18526]">SkinBuddy</span>,
+              <span className="font-semibold text-[#f18526]">MyGlamm</span>,
               we craft products to help your skin thrive with gentle, effective
               care.
             </p>
@@ -116,7 +119,7 @@ function Footer() {
         <div className="mt-10 border-t border-gray-300 pt-6 text-center">
           <p className="text-sm text-gray-600">
             &copy; {new Date().getFullYear()}{" "}
-            <span className="font-medium text-[#f18526]">SkinBuddy</span>. All
+            <span className="font-medium text-[#f18526]">MyGlamm</span>. All
             rights reserved.
           </p>
         </div>

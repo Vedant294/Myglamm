@@ -6,7 +6,7 @@ function About() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-orange-50 opacity-30 rounded-2xl -z-10"></div>
         <div className="py-12 px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4" style={{ fontFamily: "Georgia, serif" }}>
-            About SkinBuddy
+            About MyGlamm
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 italic mb-6">Your Personalized Skincare Companion</p>
           <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
@@ -31,7 +31,7 @@ function About() {
             <h2 className="text-2xl font-semibold text-gray-800" style={{ fontFamily: "Georgia, serif" }}>Our Mission</h2>
           </div>
           <p className="text-gray-700 leading-relaxed text-lg text-justify">
-            At SkinBuddy, we believe that great skincare starts with understanding your unique skin type.
+            At MyGlamm, we believe that great skincare starts with understanding your unique skin type.
             We're dedicated to helping you find the perfect products tailored specifically for your skin's needs,
             whether you have oily, dry, combination, or sensitive skin.
           </p>
@@ -48,7 +48,7 @@ function About() {
             <h2 className="text-2xl font-semibold text-gray-800" style={{ fontFamily: "Georgia, serif" }}>Our Story</h2>
           </div>
           <p className="text-gray-700 leading-relaxed text-lg text-justify">
-            Founded in 2023, SkinBuddy began as a passion project between two skincare enthusiasts who
+            Founded in 2023, MyGlamm began as a passion project between two skincare enthusiasts who
             struggled to find products that truly worked for their specific skin types. Frustrated by the
             one-size-fits-all approach in the beauty industry, we set out to create a curated selection
             of high-quality products organized by skin type, making your skincare journey simpler and more effective.
@@ -253,12 +253,12 @@ function About() {
             <svg className="w-8 h-8 text-orange-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <h2 className="text-2xl font-semibold text-gray-800" style={{ fontFamily: "Georgia, serif" }}>Join the SkinBuddy Community</h2>
+            <h2 className="text-2xl font-semibold text-gray-800" style={{ fontFamily: "Georgia, serif" }}>Join the MyGlamm Community</h2>
           </div>
           <p className="text-gray-700 leading-relaxed text-lg mb-6">
             We're more than just a store - we're building a community of skincare enthusiasts who share
             tips, reviews, and experiences. Follow us on social media and join the conversation with
-            #MySkinBuddy.
+            #MyGlamm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="flex items-center justify-center bg-[#f18526] hover:bg-orange-600 text-white px-6 py-3 rounded-md transition-colors duration-300 font-medium">
