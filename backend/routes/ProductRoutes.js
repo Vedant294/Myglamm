@@ -1,0 +1,13 @@
+import express from "express";
+import productController from "../controller/ProductController.js";
+import upload from "../middleware/multer.js";
+const router=express.Router();
+router.get("/",productController.getAllProducts);
+router.get("/byCategory",productController.getProductByCategory);
+router.get("/bestseller",productController.getBestseller);
+router.post("/products", upload.single('image'), productController.postAllProduct);
+router.get('/products/:productId', productController.getProductById);
+router.get('/search', productController.searchProducts);
+router.delete('/products/:productId', productController.deleteProductById);
+router.put('/products/:productId', upload.single('image'), productController.updateProductById);
+export default router;
