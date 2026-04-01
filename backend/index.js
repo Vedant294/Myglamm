@@ -15,7 +15,20 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL, process.env.ADMIN_URL,"http://localhost:5173","http://localhost:5174"],
+    origin: (origin, callback) => {
+      const allowed = [
+        process.env.CLIENT_URL,
+        process.env.ADMIN_URL,
+        "http://localhost:5173",
+        "http://localhost:5174",
+      ];
+      // Allow any vercel.app subdomain or if no origin (mobile/postman)
+      if (!origin || allowed.includes(origin) || origin.endsWith(".vercel.app")) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
