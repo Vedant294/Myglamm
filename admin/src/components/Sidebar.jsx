@@ -9,7 +9,6 @@ import {
   FiLogOut,
 } from "react-icons/fi";
 import { MdDashboard } from "react-icons/md";
-import logo from "../assets/logo.png";
 
 function Sidebar() {
   const [open, setOpen] = useState(false);
